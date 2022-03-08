@@ -1,0 +1,60 @@
+@import './variables.scss';
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: outfit;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  background-color: #d5e1ef;
+  main {
+    display: flex;
+    flex: 1 1 auto;
+    align-items: center;
+    justify-content: center;
+    .card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      max-width: 32rem;
+      max-height: 50rem;
+      padding: 1.6rem 1.6rem 4.2rem;
+      border-radius: 2rem;
+      background-color: $white;
+      box-shadow: 0 0 4.7rem 0 $light-gray;
+      .card__img {
+        max-width: 100%;
+        border-radius: 1.2rem;
+      }
+      .card__text {
+        margin-top: 1rem;
+        color: $dark-blue;
+        text-align: center;
+        p {
+          color: $grayish-blue;
+          font-size: 1.7rem;
+        }
+        h1 {
+          margin-bottom: 2.1rem;
+          color: inherit;
+          font-weight: 700;
+          font-size: 2.4rem;
+        }
+      }
+    }
+  }
+  .attribution {
+    padding: 1rem;
+    font-size: 1.1rem;
+    text-align: center;
+    a {
+      color: hsl(228, 45%, 44%);
+    }
+  }
+}

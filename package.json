@@ -1,0 +1,38 @@
+{
+  "name": "qr-code-component",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "brs": "browser-sync start --server \"dist\" --files \"**/*\"",
+    "format": "prettier --write ./**/*",
+    "csssort": "postcss ./**/*.scss --replace --config package.json",
+    "cssprefix": "postcss ./dist/**/*.css --use autoprefixer --config package.json",
+    "prod": "npm run csssort && npm run build && npm run cssprefix"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.2",
+    "browser-sync": "^2.27.7",
+    "css-declaration-sorter": "^6.1.4",
+    "postcss": "^8.4.8",
+    "postcss-cli": "^9.1.0",
+    "postcss-scss": "^4.0.3",
+    "prettier": "^2.5.1",
+    "sass": "^1.49.9",
+    "vite": "^2.8.0"
+  },
+  "dependencies": {
+    "@fontsource/outfit": "^4.5.4"
+  },
+  "postcss": {
+    "syntax": "postcss-scss",
+    "map": false,
+    "plugins": {
+      "css-declaration-sorter": {
+        "order": "smacss"
+      }
+    }
+  }
+}
