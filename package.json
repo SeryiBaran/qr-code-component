@@ -8,8 +8,8 @@
     "preview": "vite preview",
     "brs": "browser-sync start --server \"dist\" --files \"**/*\"",
     "format": "prettier --write ./**/*",
-    "csssort": "postcss ./**/*.scss --replace --config package.json",
-    "cssprefix": "postcss ./dist/**/*.css --use autoprefixer --config package.json",
+    "csssort": "postcss ./**/*.scss --replace --config package.json --no-map",
+    "cssprefix": "postcss ./dist/**/*.css --replace --use autoprefixer --config package.json --no-map",
     "prod": "npm run csssort && npm run build && npm run cssprefix"
   },
   "devDependencies": {
